@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2. Creación de una tabla dinámica </title>
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+
+</head>
+
+<body>
+
+
+    <form>
+        <input type="text" id="cols"> Número de Columnas <br>
+        <input type="text" id="rows"> Númeo de Filas <br><br>
+        <input type="button" id="enviar" value="Crear la tabla" onclick="crear()">
+        <input type="button" id="limpiar" value="Borrar todo" onclick="crear2()"><br><br>
+        <p>¿Qué número de celda quiere borrar?</p>
+        <input type="text" id="eliminarcolumna"> Celda <br>
+        
+        <input type="button" class="borrar" value="Eliminar Elemento" onclick="eliminarElemento()"><br><br>
+    </form>
+    <div id="resultado"></div>
+    <script>
+
+        function crear() {
+            var columna = document.getElementById("cols").value;
+            var filas = document.getElementById("rows").value;
+            var tabla = "<table border=\"1\">";
+            var contenidotabla = 0;
+
+            tabla += "<tr><td></td>";
+            for (j = 0; j < columna; j++) {
+                tabla += "<td></td>";
+            }
+            tabla += "</tr>";
+
+            for (i = 0; i < filas; i++) {
+                tabla += "<tr>";
+                tabla += "<td></td>";
+                for (j = 0; j < columna ; j++) {
+                    tabla += "<td id='"+contenidotabla+"'>" + "casilla " + contenidotabla + "</td>";
+                    contenidotabla++;
+
+                }
+                tabla += "</tr>";
+            }
+            tabla += "</table>";
+            document.getElementById("resultado").innerHTML = tabla;
+        }
+
+        function crear2() {
+            document.getElementById("resultado").innerHTML = " ";
+        }
+
+        function eliminarElemento() {
+            var columna = document.getElementById("eliminarcolumna").value;
+            var celda =columna
+            
+            $(document).ready(function () {
+                $("#"+celda).contents().remove();
+            });
+        }
+
+    </script>
+</body>
+
+</html>
