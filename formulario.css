@@ -1,0 +1,96 @@
+html{
+    font-family: 'Zen Kurenaido', sans-serif;
+    color:#3CFF00;
+}
+
+body{
+    background-image: url("betis.png");
+    background-size: cover;
+    background-position: center;
+    margin: 0px;
+    transition: all 0.3s;
+}
+
+label{
+    height: 26px; 
+    cursor:pointer;
+   
+}
+
+input {
+    height: 20px;
+    width: 40%;
+}
+
+input:invalid{
+    border-color:red;
+    }
+
+html, body, .imagen, #container{
+    height: 100%;
+}
+.label{
+    display: flex;
+    flex-direction: column;
+    float: left;    
+    width: 40%;
+
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    float: right;
+    width: 60%;
+}
+
+.form {
+    width: 100%;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: auto auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent(240, 162, 73);
+  }
+
+.boton {
+    background-color:rgb(255, 255, 255);
+    padding: 0.8em 0.8em;
+    border: 1px;
+    border-radius: 3px;
+    cursor:pointer;
+    align-items: center;
+}
+.enviar{
+    margin: 100px auto;
+}
+.condiciones{
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+}
+.condiciones input{
+    margin-bottom: -1px;
+    margin-right: 10px;
+}
+label {
+    margin: 4px 0px;
+}
+.caja{
+    border-radius: 1em;
+    border-style: double;
+    font-family: 'Rubik', sans-serif;
+    margin: 4px 0px;
+}
+
+#error{
+    color: rgb(197, 4, 4);
+    display: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+#enlace {
+    text-decoration:solid;
+}

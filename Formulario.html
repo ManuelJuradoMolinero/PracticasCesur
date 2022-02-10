@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Formulario</title>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="formulario.js"></script>
+	<link rel="stylesheet" type="text/css" href="formulario.css">
+	</link>
+</head>
+
+<body>
+
+	<div class="imagen">
+		<div id="container">
+
+			<form class="form" action="Formulario.html" onsubmit="return compararPass()" name="form">
+
+
+				<div class="condiciones">
+					<p id="error"></p>
+
+				</div>
+				<div>
+
+					<div class="todo">
+						<label for="nombre">Nombre completo*</label>
+						<input class="caja" type="text" name="nombre" id="nombre" minlength="3" required /><br>
+
+						
+						<label for="telefone">Teléfono</label>
+						<input class="caja" type="tel" name="telefono" required id="telefono"><br>
+						  
+
+						<label for="email">Email*</label>
+						<input class="caja" type="email" name="email" id="email" required /><br>
+
+						<label for="edad">Indique su fecha de nacimiento*</label>
+						<input class="caja" type="date" name="edad" id="edad" required><br>
+
+						<label for="pass">Introduzca su contraseña*</label>
+						<input class="caja" type="password" name="pass" id="pass" required minlength="6" /><br>
+
+						<label for="pass2">Vuelva a introducir su contraseña*</label>
+						<input class="caja" type="password" name="pass2" id="pass2" required minlength="6"><br>
+						
+						<label for="pass2">Indique su género</label><br><br>
+						<input type="checkbox" id="ch1" value="1" > Hombre
+						<br>
+						<input type="checkbox" id="ch2" value="2" > Mujer
+						<br>
+						<input type="checkbox" id="ch3" value="3" > Viceversa
+						<br>
+					</div>
+
+				</div>
+
+				<div class="condiciones">
+
+					<label for="condiciones"><a href="https://xn--peas-hqa.realbetisbalompie.es/index.php?option=com_content&view=article&id=10&Itemid=121" target="_blank">Acepta las condiciones de uso para continuar</a></label>
+
+					<input type="checkbox" name="condiciones" id="condiciones" required>
+
+				</div>
+
+				<div class="enviar">
+
+					<button onclick="Validar();" class="boton" type="submit">enviar</button>
+
+				</div>
+				
+				<p id="mensaje"></p>
+			</form>
+			
+		</div>
+		
+	</div>
+	
+</body>
+
+</html>
